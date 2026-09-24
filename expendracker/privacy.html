@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expendracker Privacy Policy</title>
+<meta name="description" content="How the Expendracker Android app handles SMS, spending data, Google Drive backup, purchases and ads.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --text: #1b1b1b;
+    --muted: #5c5c5c;
+    --rule: #e2dfd8;
+    --accent: #0b6b4f;
+    --callout: #eef5f1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121212;
+      --text: #ececec;
+      --muted: #a3a3a3;
+      --rule: #2c2c2c;
+      --accent: #5fd0a8;
+      --callout: #1a2621;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121212;
+    --text: #ececec;
+    --muted: #a3a3a3;
+    --rule: #2c2c2c;
+    --accent: #5fd0a8;
+    --callout: #1a2621;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 80px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 1.2rem; margin: 40px 0 8px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  p, li { overflow-wrap: anywhere; }
+  .meta { color: var(--muted); margin: 0 0 24px; }
+  .summary { background: var(--callout); border-radius: 8px; padding: 16px 20px; }
+  .summary p { margin: 0 0 8px; }
+  .summary ul { margin: 0; padding-left: 20px; }
+  a { color: var(--accent); }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Expendracker Privacy Policy</h1>
+  <p class="meta">Effective 24 September 2026 · Applies to the Expendracker app for Android (<code>com.expendracker</code>)</p>
+
+  <div class="summary">
+    <p><strong>In short</strong></p>
+    <ul>
+      <li>Expendracker reads bank transaction SMS on your phone to record your spending. Messages that are not transactions are ignored and never stored.</li>
+      <li>Your spending records stay on your phone. We run no server and never receive your data.</li>
+      <li>If you turn on backup, a copy goes straight from your phone to your own Google Drive.</li>
+      <li>The app shows ads from Google AdMob. Your SMS and spending data are never shared with advertisers.</li>
+    </ul>
+  </div>
+
+  <h2>Who we are</h2>
+  <p>Expendracker is developed by Vignesh J, an individual developer in India. In this policy, "we" means the developer and "you" means the person using the app. Contact details are at the end.</p>
+
+  <h2>SMS messages</h2>
+  <p>With your permission, Expendracker reads SMS messages to find transaction alerts from banks and payment apps. It reads new messages as they arrive. If you choose to import past transactions, it also reads messages already in your inbox for the date range you pick.</p>
+  <p>From a transaction alert it extracts only:</p>
+  <ul>
+    <li>the amount and currency</li>
+    <li>the merchant or payee name</li>
+    <li>the transaction date</li>
+    <li>whether money went out or came in</li>
+    <li>the bank or UPI reference number</li>
+    <li>a masked account hint such as "a/c ****1234", if the message has one</li>
+  </ul>
+  <p>The full text of the message is not stored. Messages that are not transaction alerts, such as personal messages or one-time passwords, are discarded as soon as they are read. They are never stored, logged or sent anywhere.</p>
+  <p>SMS content, and data derived from it, is used only to record your spending. It is never used for advertising and never sold or shared.</p>
+
+  <h2>Data stored on your phone</h2>
+  <p>The app keeps a local database on your phone containing:</p>
+  <ul>
+    <li>the transaction details listed above</li>
+    <li>expenses and income you enter by hand, including any notes</li>
+    <li>the categories (labels) you create and assign</li>
+  </ul>
+  <p>You do not need an account to use Expendracker, and we cannot see this data.</p>
+
+  <h2>Google Drive backup (optional)</h2>
+  <p>If you turn on backup, you sign in with your Google account and the app uploads a backup file of your transactions and labels to <strong>your own</strong> Google Drive. The file goes directly from your phone to Google. It never passes through a server of ours.</p>
+  <p>The app asks for Google's <code>drive.file</code> permission. With this permission, Google allows the app to see only files the app itself created. It cannot see any of your other Drive files.</p>
+  <p>You can turn backup off at any time in the app. To remove the backup, delete the file from your Google Drive. You can also withdraw the app's access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+  <h2>Android device backup</h2>
+  <p>If you have Android's own backup switched on, Android may include Expendracker's local database in your device backup to your Google account. This is controlled by your phone's settings, not by us. The database does not contain SMS message text.</p>
+
+  <h2>Purchases</h2>
+  <p>Paid features are sold through Google Play. Google handles the payment, and we never receive your card or bank details. The app receives only a confirmation from Google Play that the purchase was made, so it can unlock the feature. Google's handling of payments is covered by the <a href="https://payments.google.com/legaldocument?family=0.privacynotice">Google Payments Privacy Notice</a>.</p>
+
+  <h2>Advertising</h2>
+  <p>Expendracker shows ads provided by Google AdMob. To serve and measure ads and to prevent fraud, the AdMob SDK collects information from your device, including:</p>
+  <ul>
+    <li>your device's advertising ID</li>
+    <li>your IP address and approximate location derived from it</li>
+    <li>device and app information, such as model, operating system version and language</li>
+    <li>how you interact with ads</li>
+  </ul>
+  <p>This is collected by Google under <a href="https://policies.google.com/technologies/partner-sites">Google's policy for how it uses information from apps that use its services</a>. We do not pass your SMS messages, transactions, merchants, amounts or any other spending data to AdMob or any other ad network.</p>
+  <p>You can reset or delete your advertising ID, or opt out of personalised ads, in your phone's settings under <em>Settings › Google › Ads</em> (the exact path varies by device). If you opt out, you will still see ads, but they will not be personalised.</p>
+
+  <h2>Notifications</h2>
+  <p>With your permission, the app shows notifications, for example to ask which category a new merchant belongs to. Notifications are generated on your phone.</p>
+
+  <h2>What we do not do</h2>
+  <ul>
+    <li>We do not run servers that store or receive your data.</li>
+    <li>We do not sell your data.</li>
+    <li>We do not use analytics or crash-reporting services.</li>
+    <li>We do not share SMS-derived or spending data with anyone.</li>
+  </ul>
+
+  <h2>Keeping and deleting your data</h2>
+  <ul>
+    <li><strong>On your phone:</strong> data stays until you delete it in the app, clear the app's storage, or uninstall the app.</li>
+    <li><strong>In Google Drive:</strong> the backup file stays until you delete it from Drive.</li>
+    <li><strong>Advertising data:</strong> kept by Google according to its own policies.</li>
+  </ul>
+  <p>Because we hold none of your data, there is nothing for us to delete on our side. If you have questions, contact us.</p>
+
+  <h2>Security</h2>
+  <p>Backups are sent to Google Drive over encrypted (HTTPS) connections. Only the Android system can deliver SMS to the app, so other apps cannot insert fake transactions. No method of storage or transmission is completely secure, so please keep your phone and Google account protected.</p>
+
+  <h2>Children</h2>
+  <p>Expendracker is intended for adults and is not directed at children. We do not knowingly collect information from anyone under 18.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, we will update it on this page and change the effective date at the top. Significant changes will also be announced in the app or on its Google Play listing.</p>
+
+  <h2>Contact</h2>
+  <p>Questions or requests about your privacy: <a href="mailto:vigneshj8133@gmail.com">vigneshj8133@gmail.com</a></p>
+</main>
+</body>
+</html>
