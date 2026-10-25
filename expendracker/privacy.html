@@ -11,14 +11,14 @@
 <header class="site"><div class="inner"><a class="brand" href="index.html">Expendracker</a><nav><a href="index.html">About</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="refund.html">Refunds</a><a href="contact.html">Contact</a></nav></div></header>
 <main>
   <h1>Expendracker Privacy Policy</h1>
-  <p class="meta">Effective 28 September 2026 · Applies to the Expendracker app for Android (<code>com.expendracker</code>)</p>
+  <p class="meta">Effective 25 October 2026 · Applies to the Expendracker app for Android (<code>com.expendracker</code>)</p>
 
   <div class="summary">
     <p><strong>In short</strong></p>
     <ul>
       <li>Expendracker reads bank transaction SMS on your phone to record your spending. Messages that are not transactions are ignored and never stored.</li>
       <li>Your spending records stay on your phone. We run no server and never receive your spending data.</li>
-      <li>If you send us feedback from the app, we receive your message and basic details about the app and your phone. Nothing is sent unless you tap <em>Send</em>.</li>
+      <li>If the app crashes, it sends a crash report to Google's Firebase Crashlytics: technical details only, never your messages or spending. You can turn this off in the app's settings.</li>
       <li>If you turn on backup, a copy goes straight from your phone to your own Google Drive.</li>
       <li>The app has no ads and no analytics. Your SMS and spending data are never shared with anyone.</li>
     </ul>
@@ -36,7 +36,9 @@
     <li>the transaction date</li>
     <li>whether money went out or came in</li>
     <li>the bank or UPI reference number</li>
-    <li>a masked account hint such as "a/c ****1234", if the message has one</li>
+    <li>the last digits of the account or card, such as 1234 in "a/c ****1234", if the message has them</li>
+    <li>the bank's SMS sender name, such as VM-HDFCBK, which tells the app which bank it was</li>
+    <li>the available balance, if the message shows one, which helps tell two accounts at the same bank apart</li>
   </ul>
   <p>The full text of the message is not stored. Messages that are not transaction alerts, such as personal messages or one-time passwords, are discarded as soon as they are read. They are never stored, logged or sent anywhere.</p>
   <p>SMS content, and data derived from it, is used only to record your spending. It is never used for advertising and never sold or shared.</p>
@@ -64,38 +66,44 @@
   <h2>Notifications</h2>
   <p>With your permission, the app shows notifications, for example to ask which category a new merchant belongs to. Notifications are generated on your phone.</p>
 
-  <h2 id="feedback">Feedback (optional)</h2>
-  <p>The speech-bubble icon on the app's home screen opens a feedback form. If you write a message and tap <em>Send</em>, the app sends us:</p>
+  <h2 id="crash-reports">Crash reports</h2>
+  <p>If the app crashes, or something inside it fails (such as a backup), it sends a crash report to Firebase Crashlytics, a Google service, so we can find and fix the problem. A report contains:</p>
   <ul>
-    <li>the kind of feedback you picked (bug, idea or other) and your message</li>
-    <li>the app version</li>
-    <li>your Android version</li>
-    <li>your phone's manufacturer and model</li>
+    <li>what went wrong in the app's code: the type of error and where in the code it happened</li>
+    <li>the app version, your Android version, and your phone's manufacturer and model</li>
+    <li>technical details about the phone at the time, such as free memory and storage</li>
+    <li>a random installation ID created by Crashlytics. It is not linked to you, your Google account or your phone number, and it changes if you reinstall the app</li>
+    <li>a few facts about the app itself: its database version, whether backup is connected, and how many bank accounts it has found (a number only)</li>
   </ul>
-  <p>It does not send your transactions, labels, SMS messages, account details or any identifier for you or your phone. Nothing is sent until you tap <em>Send</em>. The message is stored in a Google Sheet that only the developer can open, and is used only to fix problems and improve the app. It is never sold or shared.</p>
+  <p>A crash report never contains your SMS messages, transactions, amounts, merchant or payee names, labels or account numbers. When something goes wrong while reading a message, the app reports the error without the message.</p>
+  <p>Crash reports are on by default. You can turn them off at any time in <em>Settings › Privacy › Send crash reports</em>, and nothing is sent after that. Google keeps crash reports for 90 days and processes them under the <a href="https://firebase.google.com/support/privacy">Firebase privacy and security terms</a>.</p>
+
+  <h2 id="feedback">Feedback sent from earlier versions</h2>
+  <p>Versions of the app before 1.1.3 had a feedback form. If you used it, we received your message, the kind of feedback you picked, the app version, your Android version and your phone's manufacturer and model, but no transactions, SMS messages or identifier for you. Those messages are kept in a Google Sheet that only the developer can open, are used only to improve the app, and are never sold or shared. You can ask us to delete them (step 7 below). The form has been removed; to reach us now, email us from <em>Settings › Contact us</em>.</p>
 
   <h2>What we do not do</h2>
   <ul>
     <li>We do not run servers that store or receive your spending data.</li>
     <li>We do not sell your data.</li>
-    <li>We do not show ads or use advertising, analytics or crash-reporting services.</li>
+    <li>We do not show ads or use advertising or analytics services. The only outside service the app reports to is crash reporting, described above.</li>
     <li>We do not share SMS-derived or spending data with anyone.</li>
   </ul>
 
   <h2 id="delete-data">Deleting your Expendracker data</h2>
-  <p>Expendracker has no accounts and no server, so the developer holds none of your spending data. You can delete all of it yourself. The only thing we hold is feedback you chose to send, and you can ask us to delete that (step 6).</p>
+  <p>Expendracker has no accounts and no server, so the developer holds none of your spending data. You can delete all of it yourself. The only things held outside your phone are crash reports (step 6) and feedback you sent from an earlier version, which you can ask us to delete (step 7).</p>
   <ol>
     <li><strong>One transaction:</strong> open it in the app and tap delete.</li>
     <li><strong>Everything on your phone:</strong> go to <em>Settings › Apps › Expendracker › Storage</em> and tap <em>Clear storage</em>, or uninstall the app. This deletes all transactions, labels and settings immediately.</li>
     <li><strong>Your Google Drive backup</strong> (only if you turned backup on): open <a href="https://drive.google.com">drive.google.com</a>, search for <code>Expendracker.backup</code>, delete it, then empty the Drive trash. Google otherwise keeps items in the trash for 30 days.</li>
     <li><strong>Drive access:</strong> remove Expendracker at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> so the app can no longer write to your Drive.</li>
     <li><strong>Android device backup</strong> (if switched on in your phone's settings): delete your device backup in your Google account's backup settings, or wait for Google to replace it.</li>
-    <li><strong>Feedback you sent</strong> (only if you used the feedback form): email <a href="mailto:vigneshj8133@gmail.com">vigneshj8133@gmail.com</a> with the subject "Delete my Expendracker feedback", and roughly when you sent it and what it said, so we can find it. The form doesn't record who you are, so we can't find your messages without these details. We delete them within 30 days and reply to confirm.</li>
+    <li><strong>Crash reports:</strong> turn them off in <em>Settings › Privacy › Send crash reports</em> so no more are sent. Reports already sent are deleted automatically after 90 days. They carry no identifier we could use to find yours, so we cannot delete them sooner.</li>
+    <li><strong>Feedback you sent</strong> (only if you used the feedback form in a version before 1.1.3): email <a href="mailto:vigneshj8133@gmail.com">vigneshj8133@gmail.com</a> with the subject "Delete my Expendracker feedback", and roughly when you sent it and what it said, so we can find it. The form doesn't record who you are, so we can't find your messages without these details. We delete them within 30 days and reply to confirm.</li>
   </ol>
-  <p><strong>What is deleted:</strong> every transaction (amount, merchant, date, direction, reference, note), your labels and your app settings. Feedback messages you ask us to delete are removed completely. <strong>What is kept:</strong> nothing by us, apart from feedback you have not asked us to delete. A backup unlock you bought stays on your Google Play account so you can restore it on a new phone. Questions: contact us at the address below.</p>
+  <p><strong>What is deleted:</strong> every transaction (amount, merchant, date, direction, reference, note), your labels and your app settings. Feedback messages you ask us to delete are removed completely. <strong>What is kept:</strong> nothing by us, apart from feedback you have not asked us to delete; crash reports until they expire after 90 days. A backup unlock you bought stays on your Google Play account so you can restore it on a new phone. Questions: contact us at the address below.</p>
 
   <h2>Security</h2>
-  <p>Backups and feedback are sent over encrypted (HTTPS) connections. Only the Android system can deliver SMS to the app, so other apps cannot insert fake transactions. No method of storage or transmission is completely secure, so please keep your phone and Google account protected.</p>
+  <p>Backups and crash reports are sent over encrypted (HTTPS) connections. Only the Android system can deliver SMS to the app, so other apps cannot insert fake transactions. No method of storage or transmission is completely secure, so please keep your phone and Google account protected.</p>
 
   <h2>Children</h2>
   <p>Expendracker is intended for adults and is not directed at children. We do not knowingly collect information from anyone under 18.</p>
