@@ -11,7 +11,7 @@
 <header class="site"><div class="inner"><a class="brand" href="index.html">Expendracker</a><nav><a href="index.html">About</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="refund.html">Refunds</a><a href="contact.html">Contact</a></nav></div></header>
 <main>
   <h1>Expendracker Privacy Policy</h1>
-  <p class="meta">Effective 25 October 2026 · Applies to the Expendracker app for Android (<code>com.expendracker</code>)</p>
+  <p class="meta">Effective 31 October 2026 · Applies to the Expendracker app for Android (<code>com.expendracker</code>)</p>
 
   <div class="summary">
     <p><strong>In short</strong></p>
@@ -20,7 +20,8 @@
       <li>Your spending records stay on your phone. We run no server and never receive your spending data.</li>
       <li>If the app crashes, it sends a crash report to Google's Firebase Crashlytics: technical details only, never your messages or spending. You can turn this off in the app's settings.</li>
       <li>If you turn on backup, a copy goes straight from your phone to your own Google Drive.</li>
-      <li>The app has no ads and no analytics. Your SMS and spending data are never shared with anyone.</li>
+      <li>From version 1.2.0 the app shows one ad on its home screen, served by Google AdMob, unless you remove ads with a one-time purchase. Ads never receive your SMS or spending data.</li>
+      <li>The app has no analytics. Your SMS and spending data are never shared with anyone.</li>
     </ul>
   </div>
 
@@ -61,8 +62,21 @@
   <p>If you have Android's own backup switched on, Android may include Expendracker's local database in your device backup to your Google account. This is controlled by your phone's settings, not by us. The database does not contain SMS message text.</p>
 
   <h2>Purchases</h2>
-  <p>Paid features are sold through Google Play. Google handles the payment, and we never receive your card or bank details. The app receives only a confirmation from Google Play that the purchase was made, so it can unlock the feature. Google's handling of payments is covered by the <a href="https://payments.google.com/legaldocument?family=0.privacynotice">Google Payments Privacy Notice</a>.</p>
+  <p>The one paid feature is <em>remove ads</em>, a one-time purchase. Backup is free. Paid features are sold through Google Play. Google handles the payment, and we never receive your card or bank details. The app receives only a confirmation from Google Play that the purchase was made, so it can unlock the feature. Google's handling of payments is covered by the <a href="https://payments.google.com/legaldocument?family=0.privacynotice">Google Payments Privacy Notice</a>.</p>
 
+  <h2 id="ads">Ads (Google AdMob)</h2>
+  <p>From version 1.2.0, the app's home screen shows one ad, provided by Google AdMob, Google's advertising service. The ad is marked "AD". It is never shown on screens where you enter or check money, and never when you opened the app from one of its notifications.</p>
+  <p>When the app asks AdMob for an ad, Google's Mobile Ads SDK collects, under Google's policies:</p>
+  <ul>
+    <li>device identifiers: your phone's advertising ID and app set ID</li>
+    <li>your IP address, from which Google estimates your approximate location (city or region, not your exact position)</li>
+    <li>how you interact with the ad: whether it was shown and whether you tapped it</li>
+    <li>diagnostic information about the ad SDK, such as errors and how long ads take to load</li>
+    <li>basic device information, such as the phone model, Android version and language</li>
+  </ul>
+  <p>Google uses this to show and measure ads, to prevent fraud, and, where you allow it, to personalise ads. <strong>The app sends AdMob nothing about your SMS messages, transactions, amounts, merchants, labels or accounts</strong>: no keywords, no categories and no other targeting. We block ads for loans, credit, investing, gambling, dating and other sensitive categories.</p>
+  <p>You can reset or delete your advertising ID at any time in your phone's settings (on most phones, <em>Settings › Google › Ads</em> or <em>Settings › Privacy › Ads</em>). Where the law requires consent, such as in the European Economic Area and the United Kingdom, the app asks for it with Google's consent form before any ad is requested, and you can change your choice later in <em>Settings › Ads</em>.</p>
+  <p>If you buy remove ads, the app stops requesting ads and no longer contacts AdMob. How Google uses information from apps that show its ads is described at <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>, and in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
   <h2>Notifications</h2>
   <p>With your permission, the app shows notifications, for example to ask which category a new merchant belongs to. Notifications are generated on your phone.</p>
 
@@ -85,12 +99,13 @@
   <ul>
     <li>We do not run servers that store or receive your spending data.</li>
     <li>We do not sell your data.</li>
-    <li>We do not show ads or use advertising or analytics services. The only outside service the app reports to is crash reporting, described above.</li>
+    <li>We do not use analytics services. The only outside services the app talks to are crash reporting and, unless you remove ads, Google AdMob, both described above.</li>
+    <li>We do not use your SMS or spending data for advertising.</li>
     <li>We do not share SMS-derived or spending data with anyone.</li>
   </ul>
 
   <h2 id="delete-data">Deleting your Expendracker data</h2>
-  <p>Expendracker has no accounts and no server, so the developer holds none of your spending data. You can delete all of it yourself. The only things held outside your phone are crash reports (step 6) and feedback you sent from an earlier version, which you can ask us to delete (step 7).</p>
+  <p>Expendracker has no accounts and no server, so the developer holds none of your spending data. You can delete all of it yourself. The only things held outside your phone are crash reports (step 6), feedback you sent from an earlier version, which you can ask us to delete (step 7), and the ad data Google collects under its own policies (step 8).</p>
   <ol>
     <li><strong>One transaction:</strong> open it in the app and tap delete.</li>
     <li><strong>Everything on your phone:</strong> go to <em>Settings › Apps › Expendracker › Storage</em> and tap <em>Clear storage</em>, or uninstall the app. This deletes all transactions, labels and settings immediately.</li>
@@ -99,11 +114,12 @@
     <li><strong>Android device backup</strong> (if switched on in your phone's settings): delete your device backup in your Google account's backup settings, or wait for Google to replace it.</li>
     <li><strong>Crash reports:</strong> turn them off in <em>Settings › Privacy › Send crash reports</em> so no more are sent. Reports already sent are deleted automatically after 90 days. They carry no identifier we could use to find yours, so we cannot delete them sooner.</li>
     <li><strong>Feedback you sent</strong> (only if you used the feedback form in a version before 1.1.3): email <a href="mailto:vigneshj8133@gmail.com">vigneshj8133@gmail.com</a> with the subject "Delete my Expendracker feedback", and roughly when you sent it and what it said, so we can find it. The form doesn't record who you are, so we can't find your messages without these details. We delete them within 30 days and reply to confirm.</li>
+    <li><strong>Ad data</strong> (version 1.2.0 and later, unless you removed ads): this is held by Google, not by us. Delete or reset your advertising ID in your phone's settings, and manage Google's data at <a href="https://myaccount.google.com/data-and-privacy">myaccount.google.com/data-and-privacy</a>. Removing ads, or uninstalling the app, stops any more being collected.</li>
   </ol>
-  <p><strong>What is deleted:</strong> every transaction (amount, merchant, date, direction, reference, note), your labels and your app settings. Feedback messages you ask us to delete are removed completely. <strong>What is kept:</strong> nothing by us, apart from feedback you have not asked us to delete; crash reports until they expire after 90 days. A backup unlock you bought stays on your Google Play account so you can restore it on a new phone. Questions: contact us at the address below.</p>
+  <p><strong>What is deleted:</strong> every transaction (amount, merchant, date, direction, reference, note), your labels and your app settings. Feedback messages you ask us to delete are removed completely. <strong>What is kept:</strong> nothing by us, apart from feedback you have not asked us to delete; crash reports until they expire after 90 days. A remove-ads purchase stays on your Google Play account, so it comes back on a new phone or after a reinstall. Questions: contact us at the address below.</p>
 
   <h2>Security</h2>
-  <p>Backups and crash reports are sent over encrypted (HTTPS) connections. Only the Android system can deliver SMS to the app, so other apps cannot insert fake transactions. No method of storage or transmission is completely secure, so please keep your phone and Google account protected.</p>
+  <p>Backups, crash reports and ad requests are sent over encrypted (HTTPS) connections. Only the Android system can deliver SMS to the app, so other apps cannot insert fake transactions. No method of storage or transmission is completely secure, so please keep your phone and Google account protected.</p>
 
   <h2>Children</h2>
   <p>Expendracker is intended for adults and is not directed at children. We do not knowingly collect information from anyone under 18.</p>
