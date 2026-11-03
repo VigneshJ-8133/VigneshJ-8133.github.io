@@ -14,8 +14,9 @@ FACTS = {
     "ADDRESS": "Bengaluru (Bangalore), Karnataka, India",
     "CITY": "Bengaluru",
     "PRICE": "₹99",
+    "BACKUP_PRICE": "₹49",
     "REFUND_DAYS": "7",
-    "UPDATED": "31 October 2026",
+    "UPDATED": "4 November 2026",
 }
 
 PAGES = [
@@ -85,7 +86,7 @@ page("index.html", "Expendracker", "Expendracker records your spending automatic
     <li>Files each payment under a label, and learns your merchants as you go</li>
     <li>Shows where your money went this month: what you spent and what you received</li>
     <li>Lets you add cash spending and income by hand</li>
-    <li>Free, optional backup of your records to your own Google Drive</li>
+    <li>Optional backup of your records to your own Google Drive</li>
   </ul>
 
   <h2>Private by design</h2>
@@ -93,8 +94,9 @@ page("index.html", "Expendracker", "Expendracker records your spending automatic
 
   <h2>Pricing</h2>
   <table class="facts">
-    <tr><th>Download and all features</th><td>Free, including backup to your own Google Drive. From version 1.2.0 the free app shows one ad on its home screen, served by Google AdMob.</td></tr>
+    <tr><th>Download</th><td>Free. The free app shows one ad on its home screen, served by Google AdMob.</td></tr>
     <tr><th>Remove ads</th><td>One-time in-app purchase of {PRICE} (inclusive of applicable taxes), made through Google Play. It removes the ad for good on the Google Play account that bought it.</td></tr>
+    <tr><th>Backup to Google Drive</th><td>One-time in-app purchase of {BACKUP_PRICE} (inclusive of applicable taxes), made through Google Play, from version 1.2.1. Free for good for anyone who turned on backup before then.</td></tr>
     <tr><th>Subscriptions</th><td>None</td></tr>
   </table>
   <p>Purchases are processed by Google Play. See the <a href="refund.html">refund and cancellation policy</a> and the <a href="terms.html">terms of use</a>.</p>
@@ -131,9 +133,9 @@ page("terms.html", "Expendracker Terms of Use", "Terms of use for the Expendrack
 
   <h2>5. Purchases</h2>
   <ul>
-    <li>The app is free, and from version 1.2.0 it shows one ad on its home screen. The optional <em>remove ads</em> is a one-time in-app purchase of {PRICE}, inclusive of applicable taxes, sold through Google Play. Backup is free.</li>
+    <li>The app is free, and from version 1.2.0 it shows one ad on its home screen. Two optional features are one-time in-app purchases sold through Google Play, inclusive of applicable taxes: <em>remove ads</em> at {PRICE}, and, from version 1.2.1, <em>backup</em> to your own Google Drive at {BACKUP_PRICE}. Backup stays free for anyone who turned it on before version 1.2.1.</li>
     <li>Payment is processed by Google Play under Google's terms. We never receive your card, UPI or bank details.</li>
-    <li>Remove ads is a digital feature delivered immediately after purchase. It is tied to the Google Play account that bought it and is restored automatically when you reinstall the app with that account. On a different Google Play account the ad shows again.</li>
+    <li>Each purchase is a digital feature delivered immediately. It is tied to the Google Play account that bought it and is restored automatically when you reinstall the app with that account. On a different Google Play account it has to be bought again.</li>
     <li>Refunds and cancellations are covered by our <a href="refund.html">refund and cancellation policy</a>.</li>
   </ul>
 
@@ -164,7 +166,12 @@ page("refund.html", "Expendracker Refund and Cancellation Policy", "Refund and c
   <p class="meta">Last updated {UPDATED}</p>
 
   <h2>What you can buy</h2>
-  <p>Expendracker is free to download and use, backup included. The only paid item is <strong>remove ads</strong>: a one-time in-app purchase of {PRICE} (inclusive of applicable taxes) that removes the ad on the app's home screen for good. It is a digital feature, delivered immediately. There are no subscriptions or recurring charges.</p>
+  <p>Expendracker is free to download and use. Two items are paid, each a one-time in-app purchase (inclusive of applicable taxes), delivered immediately as a digital feature:</p>
+  <ul>
+    <li><strong>Remove ads</strong>, {PRICE}: removes the ad on the app's home screen for good.</li>
+    <li><strong>Backup</strong>, {BACKUP_PRICE}, from version 1.2.1: backs up your records to your own Google Drive. Free for anyone who turned on backup before version 1.2.1.</li>
+  </ul>
+  <p>There are no subscriptions or recurring charges.</p>
 
   <h2>Cancellation</h2>
   <p>Because there is no subscription, there is nothing to cancel after purchase. You can cancel a purchase before completing it by closing the Google Play payment screen. If a payment is still pending, it is cancelled automatically by Google Play if it does not complete.</p>
@@ -172,10 +179,10 @@ page("refund.html", "Expendracker Refund and Cancellation Policy", "Refund and c
   <h2>Refunds</h2>
   <ol>
     <li><strong>Within 48 hours of purchase:</strong> request a refund directly from Google Play at <a href="https://play.google.com/store/account/orderhistory">play.google.com/store/account/orderhistory</a>, choose the order, then <em>Request a refund</em>. Google decides these requests under its own policy.</li>
-    <li><strong>Within {REFUND_DAYS} days of purchase:</strong> email us at <a href="mailto:{EMAIL}">{EMAIL}</a> with your Google Play order number (it starts with <code>GPA.</code>) and the reason. If the ad does not go away for you and we cannot fix it, we refund the full amount.</li>
-    <li><strong>If ads come back for you</strong> within 12 months of your purchase, on the Google Play account that bought remove ads, and we cannot fix it, we refund the full amount on request.</li>
+    <li><strong>Within {REFUND_DAYS} days of purchase:</strong> email us at <a href="mailto:{EMAIL}">{EMAIL}</a> with your Google Play order number (it starts with <code>GPA.</code>) and the reason. If the feature you bought does not work for you and we cannot fix it, we refund the full amount.</li>
+    <li><strong>If a feature you bought stops working</strong> within 12 months of your purchase, on the Google Play account that bought it, and we cannot fix it, we refund the full amount on request.</li>
   </ol>
-  <p>Approved refunds are issued through Google Play to your original payment method. Google Play usually processes them within 3 to 5 business days, although your bank may take longer to show the credit. Once refunded, remove ads is taken off your account and the ad shows again. Your records on your phone and any backup file in your Drive are not affected.</p>
+  <p>Approved refunds are issued through Google Play to your original payment method. Google Play usually processes them within 3 to 5 business days, although your bank may take longer to show the credit. Once refunded, the feature is taken off your account: after a remove ads refund the ad shows again, and after a backup refund automatic backup stops. Your records on your phone and any backup file already in your Drive are not deleted.</p>
 
   <h2>Contact</h2>
   <p>{NAME} · <a href="mailto:{EMAIL}">{EMAIL}</a></p>
