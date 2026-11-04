@@ -11,8 +11,8 @@ HERE = pathlib.Path(__file__).parent
 FACTS = {
     "NAME": "J Vignesh",
     "EMAIL": "vigneshj8133@gmail.com",
-    "ADDRESS": "Bengaluru (Bangalore), Karnataka, India",
-    "CITY": "Bengaluru",
+    "ADDRESS": "Chennai, Tamil Nadu, India",
+    "CITY": "Chennai",
     "PRICE": "₹99",
     "BACKUP_PRICE": "₹49",
     "REFUND_DAYS": "7",
